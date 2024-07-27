@@ -1,7 +1,19 @@
 {
-    "functions": {
-      "api/*.js": {
-        "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
+    "builds": [
+      {
+        "src": "app.py",
+        "use": "@vercel/python"
+        
       }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "app.py"
+      }
+    ],
+    "env": {
+      "PYTHON_VERSION": "3.11.1"
     }
+      
   }
