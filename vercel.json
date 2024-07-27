@@ -1,24 +1,7 @@
 {
-    "builds": [
-      {
-        "src": "app.py",
-        "use": "@vercel/python",        
-        "functions": {
-            "api/**": {
-                "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
-            }
-  }
-          
+    "functions": {
+      "api/**": {
+        "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
       }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "app.py"
-      }
-    ],
-    "env": {
-      "PYTHON_VERSION": "3.12"
     }
-      
   }
