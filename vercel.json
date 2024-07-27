@@ -13,5 +13,12 @@
     ],
     "env": {
       "PYTHON_VERSION": "3.12"
-    }
+    },
+    
+        "functions": {
+          "api/**": {
+            "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
+          }
+        }
+      
   }
